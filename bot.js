@@ -1,9 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = "!"
-const adminprefix = "--"
-
-
+const prefix = "E"
+const adminprefix = "E"
 client.on('message', message => {
 if (message.author.id === client.user.id) return;
 if (message.guild) {
@@ -175,7 +173,7 @@ message.author.sendEmbed(embed)
 });
 
 client.on('message', function(message) {
-	const myID = "450843030963093524";
+	const myID = "512065633488470036";
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(adminprefix + "setname")) {
 		        if(message.author.id !== myID) return;
@@ -237,7 +235,7 @@ client.on('message', function(message) {
 
   client.on('message',async message => {
     if(message.content.startsWith(adminprefix + "restart")) {
-        if(message.author.id !== "450843030963093524") return message.reply('You aren\'t the bot owner.');
+        if(message.author.id !== "512065633488470036") return message.reply('You aren\'t the bot owner.');
         message.channel.send('**Restarting.**').then(msg => {
             setTimeout(() => {
                msg.edit('**Restarting..**');
